@@ -11,13 +11,12 @@ class TOH{
         System.out.print("Enter Number : ");
         int n = sc.nextInt();
         toh(n,'s','a','d');
-        sc.close();
     }
     static void toh(int n,char s,char a,char d){
         if(n>0){
-            toh(n-1,s,a,d);
+            toh(n-1,s,d,a);
             System.out.println((++stepCount) +". " + s+"-->"+d);
-            toh(n-1,a,s,d);
+            toh(n-1,a,d,s);
         }
     }
 }
